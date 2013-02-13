@@ -55,9 +55,9 @@ public class UserName {
 				
 				String s = keyboard.nextLine();
 				out.println("Username created!");
-				FileWriter addAccount = new FileWriter("UserNames.txt", true);
-					addAccount.write(" \n" + s);
-					addAccount.close();
+				FileWriter accountWriter = new FileWriter("UserNames.txt", true);
+					accountWriter.write(" \n" + s);
+					accountWriter.close();
 				
 			}else{
 				out.println("Goodbye.");
