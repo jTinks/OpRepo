@@ -22,8 +22,8 @@ public class ArrayListOne {
 		
 		diskScanner.close();
 		
-		Collections.sort(numberPool);
-		//Collections.sort(numberPool, Collections.reverseOrder());
+		//Collections.sort(numberPool);
+		Collections.sort(numberPool, Collections.reverseOrder());
 		
 		
 		for(int i = 0; i < numberPool.size(); i++){

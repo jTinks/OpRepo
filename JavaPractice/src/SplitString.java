@@ -1,4 +1,6 @@
 import static java.lang.System.out;
+
+import java.util.List;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
@@ -22,6 +24,8 @@ public class SplitString
 		String[] words = s.split(" ");
 		
 		Collections.reverse(Arrays.asList(words));
+		
+		//Collections.shuffle(Arrays.asList(words));
 		
 		for (String word : words)
 		{
