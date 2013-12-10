@@ -55,7 +55,7 @@ public class BMI_Calc2 {
 			insult = "Gettin big, brah.";
 		} else {
 			status = "obese";
-			insult = "Hit the gym, butterball.";
+			insult = "Hit the gym, fatty.";
 		}
 		
 		System.out.println("--------------------------------");
