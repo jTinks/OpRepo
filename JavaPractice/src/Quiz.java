@@ -46,7 +46,15 @@ public class Quiz {
 		
 		answerTwo = keyboard.next();
 		
+		if (answerTwo.equals("2")){
+			numberCorrect = numberCorrect ++;
+			System.out.println("That's correct!");
+		} else {
+			System.out.println("Sorry, that's wrong.");
+		}
 		
+		System.out.println();
+		System.out.println("You answered " + numberCorrect + " question(s) correctly.");
 	
 		
 		
