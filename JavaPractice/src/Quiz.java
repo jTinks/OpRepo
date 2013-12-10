@@ -7,7 +7,7 @@ public class Quiz {
 		String readiness;
 		String answerOne = "0";
 		String answerTwo = null;
-		String answerThree = null;
+		//String answerThree = null;
 		int numberCorrect = 0;
 		
 		System.out.println("Are you ready for the quiz?");
@@ -33,7 +33,7 @@ public class Quiz {
 		answerOne = keyboard.next();
 		
 		if (answerOne.equals("3")){
-			numberCorrect = numberCorrect ++;
+			numberCorrect++;
 			System.out.println("That's correct! Next Question.");
 		} else {
 			System.out.println("Sorry, that's incorrect. Next Question");
@@ -45,9 +45,10 @@ public class Quiz {
 		System.out.println("     2) No");
 		
 		answerTwo = keyboard.next();
+		keyboard.close();
 		
 		if (answerTwo.equals("2")){
-			numberCorrect = numberCorrect ++;
+			numberCorrect++;
 			System.out.println("That's correct!");
 		} else {
 			System.out.println("Sorry, that's wrong.");
