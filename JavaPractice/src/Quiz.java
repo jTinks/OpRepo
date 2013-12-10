@@ -56,6 +56,8 @@ public class Quiz {
 		
 		System.out.println();
 		System.out.println("You answered " + numberCorrect + " question(s) correctly.");
+		System.out.println();
+		System.out.println("Happy Holidays!");
 	
 		
 		
