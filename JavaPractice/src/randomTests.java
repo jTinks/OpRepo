@@ -7,7 +7,7 @@ public class randomTests {
 		
 		Random r1 = new Random();
 		
-		int randomInt = r1.nextInt(100);
+		int randomInt = r1.nextInt(100) + 1;
 		
 		System.out.println(randomInt);
 		
