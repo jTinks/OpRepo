@@ -13,9 +13,9 @@ public class CoinFlip {
 		
 		
 		Scanner keyboard = new Scanner(System.in);
-		String answerString = keyboard.next();
+		String response = keyboard.next();
 		
-		if (answerString.equalsIgnoreCase("flip")){
+		if (response.equalsIgnoreCase("flip")){
 			
 			String result = flipCoin();
 			
@@ -34,9 +34,9 @@ public class CoinFlip {
 		
 		
 		System.out.println("\nWould you like to flip again? y/n");
-		answerString = keyboard.next();
+		response = keyboard.next();
 		
-		while (answerString.equalsIgnoreCase("y")){
+		while (response.equalsIgnoreCase("y")){
 			String result = flipCoin();
 			System.out.println("\nThe coin landed " + result + "!");
 			
@@ -47,7 +47,7 @@ public class CoinFlip {
 			}
 			
 			System.out.println("\nWould you like to flip again? y/n");
-			answerString = keyboard.next();
+			response = keyboard.next();
 		}
 		
 		keyboard.close();
