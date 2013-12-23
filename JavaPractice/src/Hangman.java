@@ -10,6 +10,8 @@ public class Hangman {
 	static String wordList[] = {"penny", "hand", "calling", "orange", "next", "song"}; 
 	
 	static int numberOfMisses = 0;
+	static int numberOfGuesses = 0;
+	
 	static ArrayList<String> guessList = new ArrayList<String>();
 	
 	static String word[];
@@ -38,20 +40,11 @@ public class Hangman {
 		for (int i = 0; i < workingWord.length; i++){
 			workingWord[i] = "_";
 		}
+		
 		for (int i = 0; i < word.length; i++){
-			System.out.print(word[i]);	//test
-		}
+		}	
 		
-		System.out.println("\n ");					//test
-		System.out.println(word.length);			//test
-		System.out.println(workingWord.length);		//test
-		
-		for (int i =  0; i < workingWord.length; i++){
-			System.out.print(workingWord[i] + " ");
-		}
-		
-		
-		while(!workingWord.equals(word)){
+		while(!Arrays.equals(word, workingWord)){
 			
 			System.out.print("\n--------------------------");
 			System.out.print("\nWord:  ");
@@ -68,14 +61,17 @@ public class Hangman {
 			guess = keyboard.next();
 			
 			if (Arrays.asList(word).contains(guess)){
+				numberOfGuesses++;
 				for (int i = 0; i < word.length; i++){
 					if (guess.equals(word[i])){
 						workingWord[i] = guess;
+						
 					}
 				}
 				
 			} else {
 				numberOfMisses++;
+				numberOfGuesses++;
 				
 			    guessList.add(guess);
 				
@@ -87,7 +83,18 @@ public class Hangman {
 			
 		}
 		
-		System.out.print("\nYou finally guessed the word after " + numberOfMisses + " tries!");
+		System.out.print("\n--------------------------");
+		System.out.print("\nWord:  ");
+		for (int i = 0; i < workingWord.length; i++){
+			System.out.print(workingWord[i] + " ");
+		}
+		
+		System.out.print("\nMisses: ");
+		for(int i = 0; i < guessList.size(); i++){
+			System.out.print(guessList.get(i));
+		}
+		
+		System.out.print("\nYou guessed the word after " + numberOfGuesses + " tries!");
 		
 	}
 		
