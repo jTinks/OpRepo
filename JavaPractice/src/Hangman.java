@@ -7,7 +7,7 @@ import java.util.Random;
 public class Hangman {
 
 	
-	static String wordList[] = {"penny", "hand", "calling", "orange", "next", "song"}; 
+	static String wordList[] = {"penny", "hand", "calling", "orange", "next", "song", "water", "Color", "heavy", "station"}; 
 	
 	static int numberOfMisses = 0;
 	static int numberOfGuesses = 0;
@@ -20,6 +20,7 @@ public class Hangman {
 	static Scanner keyboard = new Scanner(System.in);
 	
 	static String guess;
+	
 	
 	public static void main(String[] args) {
 		
@@ -41,9 +42,6 @@ public class Hangman {
 			workingWord[i] = "_";
 		}
 		
-		for (int i = 0; i < word.length; i++){
-		}	
-		
 		while(!Arrays.equals(word, workingWord)){
 			
 			System.out.print("\n--------------------------");
@@ -58,7 +56,7 @@ public class Hangman {
 			}
 			
 			System.out.print("\nInput a guess:");
-			guess = keyboard.next();
+			guess = keyboard.next().substring(0, 1);
 			
 			if (Arrays.asList(word).contains(guess)){
 				numberOfGuesses++;
@@ -75,10 +73,6 @@ public class Hangman {
 				
 			    guessList.add(guess);
 				
-				System.out.print("\nMisses: ");
-				for (int i = 0; i < guessList.size(); i++){
-					System.out.print(guessList.get(i));
-				}
 			}
 			
 		}
